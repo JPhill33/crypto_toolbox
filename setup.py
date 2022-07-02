@@ -12,7 +12,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='crypto_toolbox',
-    version='0.0.3',
+    version='0.0.1',
     author='Josh Phillips',
     author_email='joshuataylorphillips@gmail.com',
     description='Package for crypto metrics and borrowing/lending analysis',
