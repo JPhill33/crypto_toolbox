@@ -18,7 +18,7 @@ setuptools.setup(
     description='Package for crypto metrics and borrowing/lending analysis',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/mike-huls/toolbox',
+    url='https://github.com/JPhill33/crypto_toolbox.git',
     license='MIT',
     packages=['crypto_toolbox'],
     install_requires=['requests', 'json', 'urllib.request', 'pandas', 'statistics', 'numpy', 'datetime'],
