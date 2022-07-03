@@ -17,6 +17,6 @@ setuptools.setup(
     url='https://github.com/JPhill33/crypto_toolbox',
     license='MIT',
     packages=['crypto_toolbox'],
-    install_requires=['requests', 'json', 'urllib.request', 'pandas', 'statistics', 'numpy', 'datetime'],
+    install_requires=['requests', 'json', 'urllib', 'pandas', 'statistics', 'numpy', 'datetime'],
 )
 
