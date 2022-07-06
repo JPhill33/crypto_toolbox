@@ -14,9 +14,7 @@ import json
 import pandas as pd
 import statistics
 import numpy as np
-#from scipy.stats import norm
 import numpy as np
-#import seaborn as sns
 from datetime import datetime, date, timedelta
 
 
@@ -31,7 +29,10 @@ initial_investment = 100000
 
 #############################################################################################
 
-def collateral(): 
+# Collateral function returns collateral needed for given asset based on inputs:
+# 1) ASSET 2) CURRENCY 3) TO DATE (returns full asset reurns available) and
+# 4) INITIAL INVESTMENT (aka loan request amount)
+def collateral(asset, currency, to_date, initial_investment): 
     
     def coin_collector():
         # Call in list of top 250 coins from coingecko API
@@ -123,15 +124,6 @@ def collateral():
         VaR_df['VaR99'] = VaR99    
         VaR_df = VaR_df.rename(index={"price": "VaR"})
         
-        # Search function - search asset to determing coin type 
-        #def search(values, searchFor):
-        #    for k in values:
-        #        for v in values[k]:
-        #            if searchFor in v:
-        #                return k
-        #    return None
-        
-        #search_result = search(coin_types, asset) 
         
         search_result = coin_types[asset]
         search_result = ''.join(map(str,search_result))
