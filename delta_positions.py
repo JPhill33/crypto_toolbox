@@ -71,7 +71,7 @@ def get_delta_neutral(assets, currency, from_date, to_date, initial_investment):
         return df
     
     def get_delta(assets, currency, from_date, to_date, initial_investment):
-        # Compute the annualized standard deviation of asset returns
+        # Run historical prices function and get daily return data for asset
         asset_prices = historical_prices(assets, currency, from_date, to_date)
         asset_daily_returns = asset_prices.pct_change()
         
@@ -87,7 +87,7 @@ def get_delta_neutral(assets, currency, from_date, to_date, initial_investment):
         
         bit_df_put['expiration_at'] = pd.to_datetime(bit_df_put['expiration_at'], unit='ms')
         
-        # Get current time to make time to expiry calculation
+        # Get current time to get time to expiry calculation
         date_time = date.today()
         current_time = time.mktime(date_time.timetuple())
         bit_df_put['today'] = int(current_time)*1000
