@@ -29,14 +29,14 @@ key = os.getenv("C_KEY")
 ############################################################################################
 assets = ['btc']
 currency = 'usd'
-initial_investment = 125000
+initial_investment = 500000
 allocation_pct = [1.0]
 today = date.today()
 to_date = '2020-12-30'
 from_date = today.strftime("%Y-%m-%d")
 #############################################################################################
 
-def get_portfolio_delta(assets, currency, from_date, to_date, initial_investment):
+def get_delta_neutral(assets, currency, from_date, to_date, initial_investment):
 
     def historical_prices(assets, currency, from_date, to_date):
         # Get asset historical pricing
